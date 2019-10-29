@@ -1,0 +1,33 @@
+<div class="panel panel-default" ng-init="getall()">
+    <div class="panel-heading">
+        <strong>The Courses</strong>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <button href="" class="btn btn-warning" ui-sref="addexam" style="float:right;margin:5px;"><i class="fa fa-plus"></i> Add New</button>	
+        <table width="100%" class="table table-striped table-bordered table-hover" id="regie-tb">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  ng-repeat="exam in exams">
+                    <td>{{ exam.exam_id }}</td>
+                    <td>{{ exam.exam_name }}</td>
+                    <td>
+                        <button type="button" class="btn btn-success" ui-sref="editexam({exam: exam})"><i class="fa fa-edit"></i> Edit</button> 
+			<button type="button" class="btn btn-danger" ui-sref="delexam({exam: exam})"> <i class="fa fa-trash"></i> Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <!-- /.table-responsive -->
+
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->

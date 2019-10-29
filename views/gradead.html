@@ -1,0 +1,35 @@
+<div class="row">
+        <div class="col-sm-4 col-sm-offset-4" ng-init="listexams()" >
+        <div class="panel panel-default" >
+            <div class="panel-heading">
+              Add a New Grade to {{ userinfo.first_name + ' ' + userinfo.last_name }}
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                    <div class="alert alert-danger text-center" ng-show="error">
+                    <button type="button" class="close" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
+                    <i class="fa fa-warning"></i> {{ message }}
+                </div>
+                
+                    <div>                  
+                        <div class="form-group">
+                            <label>Course</label>
+                            <select ng-model="selectedexam" ng-options="exam.exam_name for exam in exams track by exam.exam_id" class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Grade:</label>
+                            <input type="text" class="form-control" ng-model="grade.grade">
+                           
+                        </div>
+                    </div>
+                                <div>
+                                    <button href="" type="button" class="btn btn-default" ui-sref="students"><i class="fa fa-arrow-left"></i> Back</button>
+                                    <button type="button" class="btn btn-primary pull-right" ng-click="add()"><i class="fa fa-save"></i> Save</button>
+                                </div>
+                </div>
+                {{grade.exam_id}}
+            <!-- /.panel-body -->
+        </div>
+                    
+        </div>
+    </div>

@@ -1,0 +1,37 @@
+
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-4">
+<div class="panel panel-default" >
+    <div class="panel-heading">
+      Add a New Student
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+            <div class="alert alert-danger text-center" ng-show="error">
+			<button type="button" class="close" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
+			<i class="fa fa-warning"></i> {{ message }}
+		</div>
+		
+			<div>
+				
+				
+				<div class="form-group">
+					<label>Last Name:</label>
+					<input type="text" class="form-control" ng-model="user.last_name">
+				</div>
+				<div class="form-group">
+						<label>First Name:</label>
+						<input type="text" class="form-control" ng-model="user.first_name">
+					</div>
+				</div>
+                        <div>
+                            <button href="" type="button" class="btn btn-default" ui-sref="students"><i class="fa fa-arrow-left"></i> Back</button>
+			            	<button type="button" class="btn btn-primary pull-right" ng-click="add()"><i class="fa fa-save"></i> Save</button>
+                        </div>
+{{user.role_id}}
+    </div>
+    <!-- /.panel-body -->
+</div>
+            
+</div>
+</div>

@@ -1,0 +1,33 @@
+
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-4">
+<div class="panel panel-default" >
+    <div class="panel-heading">
+       Add a Course
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+            <div class="alert alert-danger text-center" ng-show="error">
+			<button type="button" class="close" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
+			<i class="fa fa-warning"></i> {{ message }}
+		</div>
+		
+			<div>
+				
+				
+				<div class="form-group">
+					<label>Name:</label>
+					<input type="text" class="form-control" ng-model="exam.exam_name">
+				</div>
+			</div>
+                        <div>
+                            <button href="" type="button" class="btn btn-default" ui-sref="exams"><i class="fa fa-arrow-left"></i> Back</button>
+			            	<button type="button" class="btn btn-primary pull-right" ng-click="add()"><i class="fa fa-save"></i> Save</button>
+                        </div>
+	
+    </div>
+    <!-- /.panel-body -->
+</div>
+            
+</div>
+</div>

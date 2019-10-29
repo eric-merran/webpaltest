@@ -1,0 +1,19 @@
+<br />
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-4">
+		<div class="alert alert-danger text-center" ng-show="error">
+			<button type="button" class="close" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
+			<i class="fa fa-warning"></i> {{ message }}
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4 class="text-center">Are you sure that you want to delete this course:</h4>
+				<h3 class="text-center">{{ examinfo.exam_name }}</h3><br>
+				<button type="button" class="btn btn-default" ui-sref="exams"><i class="fa fa-arrow-left"></i> Retour</button>
+                                <button type="button" class="btn btn-danger pull-right" ng-click="delete()"><i class="fa fa-trash"></i> Delete</button>
+				
+			</div>
+		</div>
+
+	</div>
+</div>
