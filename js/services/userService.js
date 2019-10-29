@@ -10,7 +10,7 @@ app.factory('userService', function($http){
 			var add = $http.post('api/adduser.php', user);
 			return add;
 		},
-		update: function(user){
+		edit: function(user){
 			var edit = $http.post('api/upduser.php', user);
 			return edit;
 		},

@@ -8,7 +8,7 @@
                 <div class="panel-body">
                     <h4 class="text-center">Are you sure that you want to delete :</h4>
                     <h3 class="text-center">{{ gradeinfo.grade + ' in ' + gradeinfo.exam_name }}</h3><br>
-                    <button type="button" class="btn btn-default" ui-sref="grades"><i class="fa fa-arrow-left"></i> Back</button>
+                    <button type="button" class="btn btn-default" ui-sref="grades({user: userinfo})"><i class="fa fa-arrow-left"></i> Back</button>
                     <button type="button" class="btn btn-danger pull-right" ng-click="delete()"><i class="fa fa-trash"></i> Delete</button>
                     
                 </div>

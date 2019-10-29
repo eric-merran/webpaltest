@@ -69,14 +69,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
          .state('delgrade', {
             url: '/delgrade/',
-            params: {grade: null},
+            params: {grade: null,
+                     user: null
+        },
             templateUrl: 'views/gradedel.html',
             controller: 'gradesCtrl'
         })
         
         .state('editgrade', {
             url: '/editgrade/',
-            params: {grade: null},
+            params: {grade: null,
+                     user: null
+             },
             templateUrl: 'views/gradeupd.html',
             controller: 'gradesCtrl'
         })

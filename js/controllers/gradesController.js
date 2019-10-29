@@ -33,15 +33,15 @@ app.controller('gradesCtrl', ['$scope', 'gradeService','examService', '$state', 
 			}
 			else{
 				console.log(response);
-                $state.go('grades', $scope.userinfo);
+                $state.go('grades',{user: $scope.userinfo});
 			}
 		});
 	};
 
     
-	//delete user
+	//delete grade
 	$scope.delete = function(){
-		var delgrade = gradeService.delete($scope.userinfo);
+		var delgrade = gradeService.delete($scope.gradeinfo);
 		delgrade.then(function(response){
 			if(response.data.error){
 				$scope.error = true;
@@ -49,7 +49,7 @@ app.controller('gradesCtrl', ['$scope', 'gradeService','examService', '$state', 
 			}
 			else{
 				console.log(response);
-				$state.go('grades',$scope.$userinfo);
+				$state.go('grades',{user: $scope.userinfo});
 			}
 		});
 	};
@@ -65,7 +65,7 @@ app.controller('gradesCtrl', ['$scope', 'gradeService','examService', '$state', 
 			}
 			else{
 				console.log(response);
-				$state.go('grades', $scope.$userinfo);
+				$state.go('grades',{user: $scope.userinfo});
 			}
 		});
 	}

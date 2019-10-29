@@ -6,7 +6,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 include_once("./dal/grades.php");
 
-    $data = json_decode(file_get_contents("php://input"),true);
+    $data = json_decode(file_get_contents("php://input"));
 
     $out = array('error' => false);
 
@@ -15,7 +15,7 @@ include_once("./dal/grades.php");
     $result = $tgr->deleteGrade($data->user_id,$data->exam_id);
 
    	if($result){
-   		$out['message'] = 'Grade deleted Successfully';
+   		$out['message'] = 'Grade deleted Successfully:'. $data->exam_id;
    	}
    	else{
    		$out['error'] = true;

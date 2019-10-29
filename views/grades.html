@@ -14,12 +14,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  ng-repeat="gr in grades  | filter:f">
+                    <tr  ng-repeat="gr in grades">
                         <td>{{ gr.exam_name }}</td>
-                        <td>{{ gr.grade }}</td>
+                        <td>{{ gr.grade }} </td>
                         <td>
-                            <button type="button" class="btn btn-success" ui-sref="editgrade({grade: gr})"><i class="fa fa-edit"></i> Edit</button> 
-                            <button type="button" class="btn btn-danger" ui-sref="delgrade({grade: gr})"> <i class="fa fa-trash"></i> Delete</button>
+                            <button type="button" class="btn btn-success" ui-sref="editgrade({user: userinfo, grade: gr})"><i class="fa fa-edit"></i> Edit</button> 
+                            <button type="button" class="btn btn-danger" ui-sref="delgrade({user: userinfo, grade: gr})"> <i class="fa fa-trash"></i> Delete</button>
                         </td>
                     </tr>
     

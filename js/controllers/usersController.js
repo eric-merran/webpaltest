@@ -44,7 +44,7 @@ app.controller('usersCtrl', ['$scope', 'userService', '$state', '$stateParams' ,
 	
 	//update user
         $scope.update = function(){
-		var updateuser = userService.update($scope.userinfo);
+		var updateuser = userService.edit($scope.userinfo);
 		updateuser.then(function(response){
 			console.log(response);
 			if(response.data.error){
