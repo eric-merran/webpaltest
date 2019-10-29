@@ -32,7 +32,7 @@ include_once("./dal/users.php");
      
         $result = $tuser->addUser();
         
-        if($data){
+        if($result){
             $out['message'] = 'User added ';
         }
         else{

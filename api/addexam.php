@@ -26,7 +26,7 @@ $data = json_decode(file_get_contents("php://input"));
      
         $result = $texam->addExam();
         
-        if($data){
+        if( $result){
             $out['message'] = 'Exam added ';
         }
         else{

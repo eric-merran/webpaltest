@@ -20,7 +20,7 @@ $data = json_decode(file_get_contents("php://input"));
      
         $result = $tgr->addGrade();
         
-        if($data){
+        if($result){
             $out['message'] = 'grade added ';
         }
         else{
